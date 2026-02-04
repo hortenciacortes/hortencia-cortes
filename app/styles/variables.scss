@@ -1,0 +1,24 @@
+:root {
+  --hc-primary-500        : #1f5f59d1;
+  --hc-primary-400        : #4FA7A0;
+  --hc-primary-300        : #8FBEB8;
+
+  --hc-secondary-500      : #2A2F2E;
+  --hc-secondary-400      : #6E8F8B;
+  --hc-secondary-300      : #6E8F8B;
+
+  --hc-foreground-500     : #2a2a2a;
+  --hc-foreground-400     : #3c3c3c;
+  --hc-foreground-200     : #727272;
+  --hc-foreground-100     : #cfcfcf;
+  --hc-foreground-50      : #f4f4f4;
+  --hc-foreground-10      : #ffffff;
+
+  --hc-text-primary       : var(--hc-primary-500);
+  --hc-text-strong        : var(--hc-foreground-500);
+  --hc-text-light         : var(--hc-foreground-10);
+
+  --hc-background-light   : var(--hc-foreground-10);
+  --hc-background-medium  : var(--hc-foreground-50);
+  --hc-background-linear  : linear-gradient(to bottom, #DCCCB1, var(--hc-foreground-10));
+}

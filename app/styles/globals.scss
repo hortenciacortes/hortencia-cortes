@@ -1,0 +1,121 @@
+@use "./variables.scss" as *;
+@use "./mixins.scss" as *;
+@use "./buttons.scss";
+
+* {
+  margin                    : 0;
+  padding                   : 0;
+  box-sizing                : border-box;
+  scroll-behavior           : smooth;
+}
+
+section {
+  padding                   : 90px 0px
+}
+
+h1,
+h2 {
+  @include typography(700, 40px, var(--hc-text-strong), 1.5);
+}
+
+h3 {
+  @include typography(600, 30px, var(--hc-text-strong), 1.4);
+}
+
+h4 {
+  @include typography(500, 24px, var(--hc-text-strong), 1.3);
+}
+
+h5 {
+  @include typography(600, 18px, var(--hc-text-strong), 1.2);
+}
+
+p {
+  @include typography(400, 16px, var(--hc-text-strong), 1.5);
+}
+
+span {
+  @include typography(400, 14px, var(--hc-text-strong), 1.5);
+}
+
+a {
+  @include typography(400, 16px, var(--hc-text-strong));
+  cursor                    : pointer;
+  text-decoration           : none;
+  transition                : 300ms;
+
+  &:hover {
+    color                   : var(--hc-text-primary);
+  }
+}
+
+button {
+  @include typography(600, 16px, var(--hc-text-light), 1.5);
+  background-color          : var(--hc-primary-500);
+  color                     : var(--hc-text-light);
+  border                    : none;
+  padding                   : 10px 20px;
+  border-radius             : 5px;
+  cursor                    : pointer;
+  transition                : background-color 300ms;
+}
+
+.linear-vertical {
+  background-clip           : text;
+  -webkit-background-clip   : text !important;
+  color                     : transparent;
+  background                : var(--hc-background-linear);
+}
+
+.highlight {
+  position: relative;
+  padding-left: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    background-color: var(--hc-secondary-300);
+  }
+}
+
+.grid-pattern {
+  display                   : grid;
+  grid-template             : auto / 1fr 1200px 1fr;
+}
+
+@media (max-width: 1350px) {
+  .grid-pattern {
+    grid-template           : auto / 1fr 90% 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-pattern {
+    grid-template           : auto / 1fr 92% 1fr;
+  }
+
+  h1,
+  h2 {
+    font-size               : 30px !important;
+    text-align              : center;
+  }
+
+  h3 {
+    font-size               : 24px !important;
+    text-align              : center;
+  }
+
+  p {
+    text-align              : center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size               : 24px !important;
+  }
+}

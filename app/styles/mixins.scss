@@ -1,0 +1,22 @@
+@mixin typography($weight, $size, $color, $lineHeight: null) {
+  font-family       : var(--hc-font-family), sans-serif;
+  font-size         : $size;
+  line-height       : $lineHeight;
+  font-weight       : $weight;
+  color             : $color;
+}
+
+/**
+  * Flexbox mixin for easy flexbox layout
+  * @param $justify - Justify content value (e.g., center, space-between)
+  * @param $align - Align items value (default: center)
+  * @param $column - Whether to use column direction (default: false)
+  * @param $gap - Gap between flex items (default: 20px)
+  */
+@mixin flex($justify, $align: center, $column: false, $gap: 20px) {
+  display           : flex;
+  align-items       : $align;
+  justify-content   : $justify;
+  flex-direction    : if($column, column, null);
+  gap               : $gap;
+}

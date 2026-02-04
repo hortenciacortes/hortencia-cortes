@@ -1,0 +1,89 @@
+@use "@styles/mixins.scss" as *;
+
+.container {
+  @include flex(center, center, true);
+  position        : relative;
+  min-height      : 100vh;
+}
+
+.card {
+  @include flex(space-evenly, center, true, 24px);
+  z-index         : 1;
+  min-height      : 90vh;
+  max-width       : 580px;
+  padding         : 36px 26px;
+
+  header {
+    @include flex(center, center, true, 32px);
+  }
+
+  h1 {
+    color         : var(--hc-primary-500);
+  }
+
+  p {
+    @include flex(center, center, false, 8px);
+  }
+
+  svg {
+    color        : var(--hc-primary-300);
+  }
+  .description {
+    @include flex(center, start, true, 8px);
+
+    p {
+      color        : var(--hc-foreground-400);
+    }
+
+    div {
+      @include flex(start, start, false, 4px);
+    }
+
+  }
+  span {
+    display     : block;
+    margin-left: 26px;
+    color       : var(--hc-foreground-200);
+  }
+
+  .buttons {
+    @include flex(center, center, true, 24px);
+    position      : relative;
+    width         : 100%;
+
+    a, button {
+      width       : 100%;
+    }
+
+    img {
+      position    : absolute;
+      left        : 16px;
+    }
+  }
+}
+
+/* Imagem ocupando tudo */
+.backgroundImage {
+  position        : absolute;
+  inset           : 0;
+  z-index         : 1;
+
+  img {
+    object-fit    : cover;
+  }
+}
+
+.address {
+  animation       : slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity       : 0;
+    transform     : translateY(-8px);
+  }
+  to {
+    opacity       : 1;
+    transform     : translateY(0);
+  }
+}
