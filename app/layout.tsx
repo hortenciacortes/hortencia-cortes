@@ -49,16 +49,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* <!-- Google tag (gtag.js) --> */}
-        {/* <Script src="https://www.googletagmanager.com/gtag/js?id=G-S9QRWFPKZQ" strategy="afterInteractive"></Script>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-651Z7XK4EZ" strategy="afterInteractive"></Script>
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-S9QRWFPKZQ');
+            gtag('config', 'G-651Z7XK4EZ');
           `}
-        </Script> */}
+        </Script>
       </head>
       <body className={`${montserrat.variable}`}>
         {children}

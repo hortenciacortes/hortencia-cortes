@@ -5,10 +5,6 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 import ExportedImage from "next-image-export-optimizer";
 
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import PublicIcon from "@mui/icons-material/Public";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
 
@@ -46,7 +42,7 @@ export default function BioPage() {
             <h1>Hortência Côrtes</h1>
             <p>
               <LaptopMacIcon />
-              Desenvolvedora Front-end
+              Desenvolvedora Front-end & Web
             </p>
           </div>
 

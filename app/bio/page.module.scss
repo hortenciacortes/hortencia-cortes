@@ -2,23 +2,23 @@
 
 .container {
   @include flex(center, center, true);
-  position        : relative;
-  min-height      : 100vh;
+  position          : relative;
+  min-height        : 100vh;
 }
 
 .card {
   @include flex(space-evenly, center, true, 24px);
-  z-index         : 1;
-  min-height      : 90vh;
-  max-width       : 580px;
-  padding         : 36px 26px;
+  z-index           : 1;
+  min-height        : 90vh;
+  max-width         : 580px;
+  padding           : 36px 26px;
 
   header {
     @include flex(center, center, true, 32px);
   }
 
   h1 {
-    color         : var(--hc-primary-500);
+    color           : var(--hc-primary-500);
   }
 
   p {
@@ -26,13 +26,13 @@
   }
 
   svg {
-    color        : var(--hc-primary-300);
+    color           : var(--hc-primary-300);
   }
   .description {
     @include flex(center, start, true, 8px);
 
     p {
-      color        : var(--hc-foreground-400);
+      font-weight   : 600;
     }
 
     div {
@@ -41,49 +41,48 @@
 
   }
   span {
-    display     : block;
-    margin-left: 26px;
-    color       : var(--hc-foreground-200);
+    display         : block;
+    margin-left     : 26px;
   }
 
   .buttons {
     @include flex(center, center, true, 24px);
-    position      : relative;
-    width         : 100%;
+    position        : relative;
+    width           : 100%;
 
     a, button {
-      width       : 100%;
+      width         : 100%;
     }
 
     img {
-      position    : absolute;
-      left        : 16px;
+      position      : absolute;
+      left          : 16px;
     }
   }
 }
 
 /* Imagem ocupando tudo */
 .backgroundImage {
-  position        : absolute;
-  inset           : 0;
-  z-index         : 1;
+  position          : absolute;
+  inset             : 0;
+  z-index           : 1;
 
   img {
-    object-fit    : cover;
+    object-fit      : cover;
   }
 }
 
 .address {
-  animation       : slideDown 0.3s ease;
+  animation         : slideDown 0.3s ease;
 }
 
 @keyframes slideDown {
   from {
-    opacity       : 0;
-    transform     : translateY(-8px);
+    opacity         : 0;
+    transform       : translateY(-8px);
   }
   to {
-    opacity       : 1;
-    transform     : translateY(0);
+    opacity         : 1;
+    transform       : translateY(0);
   }
 }
