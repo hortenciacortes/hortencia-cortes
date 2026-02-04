@@ -26,6 +26,18 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  icons: {  
+    icon: [
+      {
+        url: "./favicon.ico",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "./favicon-dark.ico",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ]
+  },
 };
 
 export default function RootLayout({
